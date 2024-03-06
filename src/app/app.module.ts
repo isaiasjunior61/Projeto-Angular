@@ -1,29 +1,35 @@
-/* Importações Angular Material*/
-import { NgClass } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/';
-import { MatFormFieldModule } from '@angular/ form field';
-import { MatGridListModule } from '@angular/material/grid list';
-import { MatIconModule } from '@angular/ icon';
-import { MatInputModule } from '@angular/material/';
-import { MatMenuModule } from '@angular/material/';
-import { MatToolbarModule } from '@angular/material/';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+
+/* Importações Angular Material*/
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './login/login.component';
+import { InicioComponent } from './inicio/inicio.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        MenuComponent,
+        LoginComponent,
+        InicioComponent,
+        RodapeComponent
     ],
     imports: [
-        BrowserModule,
         AppRoutingModule,
+        MatButtonModule, 
         BrowserAnimationsModule,
-        MatButtonModule,
+        BrowserModule,
         MatCardModule,
         MatFormFieldModule,
         MatGridListModule,
@@ -31,11 +37,14 @@ import { RodapeComponent } from './rodape/rodape.component';
         MatInputModule,
         MatMenuModule,
         MatToolbarModule,
-        LoginComponent,
         MenuComponent,
-        RodapeComponent,
-        InicioComponent
+        LoginComponent,
+        InicioComponent,
+        RodapeComponent        
     ],
     providers: [],
     bootstrap: [AppComponent]
-});
+})
+export class AppModule { }
+
+
