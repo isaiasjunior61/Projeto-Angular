@@ -7,15 +7,12 @@ main {
 }
 
 #section-banner img {
-    height: 500px;
+    height: 500px; 
 }
 
 .example-card{
     max-width: 400px;
-}
-.example-header-image{
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: auto;
+    background-color: #FFFFFF;
 }
 
 mat-grid-list{
@@ -27,13 +24,13 @@ mat-grid-tile{
     border-radius: 30px;
 }
 
-t-card-header{
+mat-grid-list, mat-card-header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-t-card-actions{
+mat-card-actions{
     display: flex;
     justify-content: space-around;
 }
